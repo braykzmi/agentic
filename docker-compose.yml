@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ./backend
+    container_name: ncd-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OPENAI_MODEL=gpt-4o-mini
+      - STORAGE_ROOT=/data
+      - WORKER_URL=http://worker:9000
+      - FLASK_ENV=production
+    volumes:
+      - ./storage:/data
+    depends_on:
+      - worker
+
+  worker:
+    build: ./worker
+    container_name: ncd-worker
+    ports:
+      - "9000:9000"
+    environment:
+      - STORAGE_ROOT=/data
+    volumes:
+      - ./storage:/data

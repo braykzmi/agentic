@@ -1,0 +1,20 @@
+:root { color-scheme: light dark; font-family: Inter, system-ui, sans-serif; }
+body { margin: 0; }
+.container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+.card { background: rgba(255,255,255,0.06); border: 1px solid rgba(0,0,0,0.08); border-radius: 14px; padding: 16px; margin-bottom: 16px; }
+.hstack { display: flex; gap: 8px; align-items: center; }
+.vstack { display: flex; gap: 12px; flex-direction: column; }
+.button { padding: 10px 14px; border-radius: 10px; border: none; cursor: pointer; }
+.button.primary { background: #3b82f6; color: white; }
+.input { padding: 10px 12px; border: 1px solid rgba(0,0,0,0.15); border-radius: 10px; flex: 1; }
+.table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.table th, .table td { border-bottom: 1px solid rgba(0,0,0,0.1); padding: 6px 8px; text-align: left; }
+.badge { font-size: 12px; padding: 2px 8px; border-radius: 999px; background: rgba(59,130,246,0.15); }
+.msg { padding: 12px 14px; border-radius: 12px; max-width: 80%; }
+.msg.user { background: rgba(59,130,246,0.15); align-self: flex-end; }
+.msg.bot { background: rgba(0,0,0,0.06); align-self: flex-start; }
+.chat { display: flex; flex-direction: column; gap: 10px; }
+.images { display: flex; gap: 8px; flex-wrap: wrap; }
+img.chart { max-width: 480px; border-radius: 8px; border: 1px solid rgba(0,0,0,0.08); }
+.small { font-size: 12px; opacity: 0.7; }
+pre.code { background: rgba(0,0,0,0.06); padding: 12px; border-radius: 8px; overflow: auto; }
